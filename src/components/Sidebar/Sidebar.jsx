@@ -13,7 +13,7 @@ const [extended,setExtended] = useState(false)
         <div className="top">
             <img onClick = {()=>setExtended(prev=>!prev)} className='menu' src={assets.menu_icon} alt='' /> 
             <div className="new-chat">
-                <img className='new-chat-icon' src={assets.plus_icon} alt=''/>
+                {extended ? <img className='new-chat-icon-extended' src={assets.plus_icon} alt=''/> : <img className='new-chat-icon' src={assets.plus_icon} alt=''/>}
                  {extended ?<p>New Chat</p> : null}
             </div>
             {extended ? 
